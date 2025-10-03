@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary-500: theme('colors.primary.500');
+        --color-accent-500: theme('colors.accent.500');
+        --color-warning-500: theme('colors.warning.500');
+        --color-success-500: theme('colors.success.500');
+        --color-danger-500: theme('colors.danger.500');
+        --color-neutral-200: theme('colors.neutral.200');
+        --color-neutral-500: theme('colors.neutral.500');
+        --color-surface: theme('colors.surface.DEFAULT');
+    }
+
+    .dark {
+        --color-primary-500: theme('colors.primary.400');
+        --color-accent-500: theme('colors.accent.400');
+        --color-warning-500: theme('colors.warning.400');
+        --color-success-500: theme('colors.success.400');
+        --color-danger-500: theme('colors.danger.400');
+        --color-neutral-200: theme('colors.neutral.700');
+        --color-neutral-500: theme('colors.neutral.300');
+        --color-surface: theme('colors.surface.dark');
+    }
+
+    body {
+        @apply bg-neutral-50 text-neutral-900 antialiased transition-colors dark:bg-neutral-900 dark:text-neutral-100;
+    }
+}
